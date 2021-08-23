@@ -1,0 +1,32 @@
+body{
+    background: aquamarine;
+}
+.wrapper {
+  background-color:#008CBA;
+  min-width: 700px; 
+  margin: 0 auto;
+  width: 85%;
+  border: 2px solid blue;
+}
+.button {
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button {background-color: #2F4F4F;} /* dark*/
+h1{
+    text-align: center;
+    letter-spacing:5px;
+    color: whitesmoke;
+        }
+ H2{
+    text-align: center;
+    color: hotpink;
+        }
