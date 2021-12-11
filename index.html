@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Homework 8">
+    <link rel="stylesheet" href="style8.css">
+    <link rel="stylesheet" href="css/parts_navigation_table.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   
+        <script>
+         function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "gethint.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }  
+     </script>
+     <title>Homework 8</title>
+    </head>
+       <body>
+       <h1>Homework 8</h1>
+       <h2> Ajax Applications</h2>
+           
+   <ul class="nav">
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw1/">Home</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw2/">Homework2</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw3/">Homework3</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw4/">Homework4</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw5/">Homework5</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw6/">Homework6</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw7/">Homework7</a></li>
+        <li><a class="w3-btn" href="https://fvargas78.github.io/hw8/">Homework8</a></li>
+   </ul>         
+           
+<p><b>Start typing a name in the input field below:</b></p>
+<form action="">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions:<span id="txtHint"></span></p>
+
+<hr>
+<p>The REST API of choice is called <em>AirVisual</em>. It is an API that returns the air quality index
+of a location given specific parameters (country, state, city). The type of response is a JSON, which makes it easy to
+incorporate into the web application being built. This API does require a key to access; the type
+of access can range from a limited free account, to one that requires payment.<br> The documentation
+for use of their API can be found <a href="https://api-docs.iqair.com/?version=latest">here</a>.
+</p>
+           
+<figure>
+<img src="https://live.staticflickr.com/65535/51739447405_6ce40a7415_c.jpg" width="400" height="250" alt="word-image">
+    </figure>           
+</body>
+</html>
